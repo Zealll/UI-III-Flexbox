@@ -2,6 +2,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+@tablet: ~"(max-width: 800px)";
+
+.banana(@WD) {
+    width: @WD
+}
+
+
 html,
 body,
 div,
@@ -126,15 +134,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   font-family: "Titillium Web", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -144,41 +155,91 @@ h5 {
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
+
+
+
 .container {
-  border: 5px solid red;
-  max-width: 1000px;
-  margin: 0 auto;
+    border: 5px solid red;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media @tablet {
+        
+    }
+
+    .nav-div {
+        display: flex;
+        justify-content: space-between;
+
+        @media @tablet {
+        
+        }
+
+        nav a{
+            margin-right: 50px;
+
+            @media @tablet {
+        
+            }
+        }
+    }
+
+    .code {
+        .banana(100%);
+
+        @media @tablet {
+        
+        }
+    }
 }
-.container .nav-div {
-  display: flex;
-  justify-content: space-between;
-}
-.container .nav-div nav a {
-  margin-right: 50px;
-}
-.container .code {
-  width: 100%;
-}
+
+
 .headtwo {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media @tablet {
+
+    }
+
+    .inno {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-top: 40px;
+    }
 }
-.headtwo .inno {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top: 40px;
-}
+
 .mid {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+
+    @media @tablet {
+        
+    }
+
+    .mid-section {
+        max-width: 47%;
+
+        @media @tablet {
+            
+        }
+    }
+
+    .a {
+        .banana(28%);
+        
+        @media @tablet {
+            
+        }
+    }
 }
-.mid .mid-section {
-  max-width: 47%;
-}
-.mid .a {
-  width: 28%;
-}
+
 .cprt {
-  text-align: center;
+    
+    text-align: center
 }
+
+
+
+
